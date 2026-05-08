@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeline Mobile Detailing | Showroom Clean. Wherever You Are.</title>
+    <meta name="description" content="St. Louis' premier mobile car detailing service. We come to you, 24/7. Book now for showroom-quality results.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'gold-light': '#F4CF5F',
+                        dark: '#0A0A0A',
+                        charcoal: '#1A1A1A',
+                        'charcoal-light': '#2D2D2D'
+                    },
+                    fontFamily: {
+                        heading: ['Barlow Condensed', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Barlow Condensed', sans-serif; }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #D4AF37, #F4CF5F, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.7s;
+        }
+        
+        .shine-effect:hover::after {
+            left: 100%;
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s ease-out;
+        }
+        
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-dark text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark/95 backdrop-blur-md border-b border-charcoal-light">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                    <span class="text-2xl font-black tracking-tight">PRIMELINE</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#services" class="text-white/80 hover:text-gold transition-colors">Services</a>
+                    <a href="#about" class="text-white/80 hover:text-gold transition-colors">About</a>
+                    <a href="#reviews" class="text-white/80 hover:text-gold transition-colors">Reviews</a>
+                    <a href="#contact" class="text-white/80 hover:text-gold transition-colors">Contact</a>
+                    <a href="#contact" class="bg-gold text-dark px-6 py-3 font-bold hover:bg-gold-light transition-colors rounded">
+                        Get Your Quote
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-6">
+                <div class="flex flex-col space-y-4 pt-4 border-t border-charcoal-light">
+                    <a href="#services" class="text-white/80 hover:text-gold transition-colors py-2">Services</a>
+                    <a href="#about" class="text-white/80 hover:text-gold transition-colors py-2">About</a>
+                    <a href="#reviews" class="text-white/80 hover:text-gold transition-colors py-2">Reviews</a>
+                    <a href="#contact" class="text-white/80 hover:text-gold transition-colors py-2">Contact</a>
+                    <a href="#contact" class="bg-gold text-dark px-6 py-3 font-bold text-center rounded">
+                        Get Your Quote
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=1920&q=80" alt="Car detailing" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/70 to-dark/50"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-dark/30"></div>
+        </div>
+        
+        <!-- Decorative Gold Line -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-2 mb-8">
+                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                <span class="text-gold text-sm font-medium">5.0 Star Rated • 9 Reviews</span>
+            </div>
+            
+            <!-- Headline -->
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-none tracking-tight">
+                <span class="block">PRIMELINE</span>
+                <span class="block gradient-text">MOBILE DETAILING</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-white/80 mb-4 font-light">
+                Showroom Clean. Wherever You Are.
+            </p>
+            
+            <p class="text-lg text-white/60 mb-10 max-w-2xl mx-auto">
+                St. Louis' premier mobile detailing service. We come to you, 24/7, delivering showroom-quality results with meticulous attention to detail.
+            </p>
+            
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contact" class="shine-effect bg-gold text-dark px-10 py-4 font-bold text-lg rounded">
+                    Book Now
+                </a>
+                <a href="tel:3146026622" class="flex items-center gap-3 border-2 border-white/30 px-8 py-4 font-semibold rounded hover:border-gold hover:text-gold transition-colors">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>(314) 602-6622</span>
+                </a>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="mt-16 flex flex-wrap items-center justify-center gap-8 text-white/50 text-sm">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-clock text-gold"></i>
+                    <span>24/7 Available</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-gold"></i>
+                    <span>St. Louis Area</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-award text-gold"></i>
+                    <span>5-Star Service</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <i class="fa-solid fa-chevron-down text-gold text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="scroll-reveal py-24 lg:py-32 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image -->
+                <div class="relative">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1200&q=80" alt="Professional car detailing" class="w-full h-[500px] object-cover">
+                    </div>
+                    <!-- Stats Card -->
+                    <div class="absolute -bottom-8 -right-4 lg:-right-8 bg-charcoal border border-gold/30 rounded-xl p-6 shadow-2xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-gold/20 rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-trophy text-gold text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-black text-white">5.0</p>
+                                <p class="text-white/60 text-sm">Star Rating</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div>
+                    <div class="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wider uppercase mb-4">
+                        <span class="w-8 h-px bg-gold"></span>
+                        Why Choose Us
+                    </div>
+                    
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+                        We Come to You.<br/>
+                        <span class="text-gold">Always Ready.</span>
+                    </h2>
+                    
+                    <p class="text-lg text-white/70 mb-8 leading-relaxed">
+                        At Primeline Mobile Detailing, we bring the showroom to your driveway. No more wasted time driving to a shop. Our premium mobile detailing service delivers flawless results at your location, 24 hours a day.
+                    </p>
+                    
+                    <!-- Features -->
+                    <div class="grid sm:grid-cols-2 gap-6 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-truck-fast text-gold text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold mb-1">Fully Mobile</h3>
+                                <p class="text-white/50 text-sm">We bring all equipment to you</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-clock text-gold text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold mb-1">24/7 Available</h3>
+                                <p class="text-white/50 text-sm">Book anytime that suits you</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-gem text-gold text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold mb-1">Premium Products</h3>
+                                <p class="text-white/50 text-sm">Only top-tier detailing supplies</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-shield-check text-gold text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold mb-1">100% Guaranteed</h3>
+                                <p class="text-white/50 text-sm">Your satisfaction is our priority</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#services" class="inline-flex items-center gap-2 text-gold font-semibold hover:gap-4 transition-all">
+                        <span>Explore Our Services</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="scroll-reveal py-24 lg:py-32 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wider uppercase mb-4">
+                    <span class="w-8 h-px bg-gold"></span>
+                    Our Services
+                    <span class="w-8 h-px bg-gold"></span>
+                </div>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
+                    Premium Detailing<br/><span class="text-gold">Packages</span>
+                </h2>
+                <p class="text-lg text-white/60">
+                    From express washes to full detailing, we offer comprehensive car care services.
+                </p>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Exterior Wash -->
+                <div class="group bg-dark rounded-2xl p-8 border border-charcoal-light hover:border-gold/50 transition-all duration-500">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+                        <i class="fa-solid fa-spray-can text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Exterior Wash</h3>
+                    <p class="text-white/50 text-sm mb-6 leading-relaxed">
+                        Hand wash, wheel cleaning, tire shine, and window treatment for a fresh look.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-white/60 text-sm">
+                            <i class="fa-solid fa-check text-gold text-xs"></i>
+                            <span>Hand wash & dry</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-sm">
+                            <i class="fa-solid fa-check text-gold text-xs"></i>
+                            <span>Wheel & tire cleaning</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-sm">
+                            <i class="fa-solid fa-check text-gold text-xs"></i>
+                            <span>Window treatment</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-gold font-semibold text-sm group-hover:gap-3 transition-all">
+                        <span>Book Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Interior Detail -->
+                <div class="group bg-dark rounded-2xl p-8 border border-charcoal-light hover:border-gold/50 transition-all duration-500">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+                        <i class="fa-solid fa-couch text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Interior Detail</h3>
+                    <p class="text-white/50 text-sm mb-6 leading-relaxed">
+                        Deep vacuum, steam cleaning, leather conditioning, and dashboard treatment.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-white/60 text-sm">
+                            <i class="fa-solid fa-check text-gold text-xs"></i>
+                            <span>Deep vacuum</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-sm">
+                            <i class="fa-solid fa-check text-gold text-xs"></i>
+                            <span>Steam cleaning</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-sm">
+                            <i class="fa-solid fa-check text-gold text-xs"></i>
+                            <span>Leather conditioning</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-gold font-semibold text-sm group-hover:gap-3 transition-all">
+                        <span>Book Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Full Detail -->
+                <div class="group relative bg-dark rounded-2xl p-8 border border-charcoal-light hover:border-gold/50 transition-all duration-500">
+                    <div class="absolute top-4 right-4 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full">
+                        POPULAR
+                    </div>
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+                        <i class="fa-solid fa-car text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Full Detail</h3>
+                    <p class="text-white/50 text-sm mb-6 leading-relaxed">
+                        Complete interior and exterior treatment with clay bar and polish.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-white/60 text-sm">
+                            <i class="fa-solid fa-check text-gold text-xs"></i>
+                            <span>Full interior & exterior</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-sm">
+                            <i class="fa-solid fa-check text-gold text-xs"></i>
+                            <span>Clay bar treatment</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-sm">
+                            <i class="fa-solid fa-check text-gold text-xs"></i>
+                            <span>Paint sealant</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-gold font-semibold text-sm group-hover:gap-3 transition-all">
+                        <span>Book Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Engine Clean -->
+                <div class="group bg-dark rounded-2xl p-8 border border-charcoal-light hover:border-gold/50 transition-all duration-500">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+                        <i class="fa-solid fa-gears text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Engine Clean</h3>
+                    <p class="text-white/50 text-sm mb-6 leading-relaxed">
+                        Professional engine bay cleaning and protective dressing.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-white/60 text-sm">
+                            <i class="fa-solid fa-check text-gold text-xs"></i>
+                            <span>Degrease & clean</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-sm">
+                            <i class="fa-solid fa-check text-gold text-xs"></i>
+                            <span>Protective dressing</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-white/60 text-sm">
+                            <i class="fa-solid fa-check text-gold text-xs"></i>
+                            <span>Masking protected</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-gold font-semibold text-sm group-hover:gap-3 transition-all">
+                        <span>Book Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="scroll-reveal py-24 lg:py-32 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wider uppercase mb-4">
+                    <span class="w-8 h-px bg-gold"></span>
+                    Testimonials
+                    <span class="w-8 h-px bg-gold"></span>
+                </div>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
+                    What Our Customers<br/><span class="text-gold">Are Saying</span>
+                </h2>
+            </div>
+            
+            <!-- Rating Summary -->
+            <div class="flex flex-col items-center justify-center mb-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="text-6xl font-black text-white">5.0</span>
+                    <div class="flex flex-col">
+                        <div class="flex gap-1">
+                            <i class="fa-solid fa-star text-gold"></i>
+                            <i class="fa-solid fa-star text-gold"></i>
+                            <i class="fa-solid fa-star text-gold"></i>
+                            <i class="fa-solid fa-star text-gold"></i>
+                            <i class="fa-solid fa-star text-gold"></i>
+                        </div>
+                        <span class="text-white/60 text-sm mt-1">Based on 9 Reviews</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 bg-charcoal border border-charcoal-light rounded-full px-4 py-2">
+                    <i class="fa-brands fa-google text-white"></i>
+                    <span class="text-white/80 text-sm font-medium">Google Reviews</span>
+                </div>
+            </div>
+            
+            <!-- Reviews Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="relative bg-charcoal rounded-2xl p-8 border border-charcoal-light">
+                    <div class="absolute top-6 right-6">
+                        <i class="fa-solid fa-quote-right text-gold/20 text-4xl"></i>
+                    </div>
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star text-gold"></i>
+                        <i class="fa-solid fa-star text-gold"></i>
+                        <i class="fa-solid fa-star text-gold"></i>
+                        <i class="fa-solid fa-star text-gold"></i>
+                        <i class="fa-solid fa-star text-gold"></i>
+                    </div>
+                    <p class="text-white/80 text-lg mb-6 leading-relaxed italic">
+                        "My car looks like it just rolled off the showroom floor. The attention to detail was incredible. Can't believe they came right to my office!"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center">
+                            <span class="text-gold font-bold text-lg">CS</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Chalin Swacker</h4>
+                            <p class="text-white/50 text-sm">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="relative bg-charcoal rounded-2xl p-8 border border-charcoal-light">
+                    <div class="absolute top-6 right-6">
+                        <i class="fa-solid fa-quote-right text-gold/20 text-4xl"></i>
+                    </div>
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star text-gold"></i>
+                        <i class="fa-solid fa-star text-gold"></i>
+                        <i class="fa-solid fa-star text-gold"></i>
+                        <i class="fa-solid fa-star text-gold"></i>
+                        <i class="fa-solid fa-star text-gold"></i>
+                    </div>
+                    <p class="text-white/80 text-lg mb-6 leading-relaxed italic">
+                        "Got my car the cleanest it's ever been. 100% recommend Primeline to anyone looking for professional mobile detailing."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center">
+                            <span class="text-gold font-bold text-lg">AS</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">About Swift</h4>
+                            <p class="text-white/50 text-sm">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="relative bg-charcoal rounded-2xl p-8 border border-charcoal-light">
+                    <div class="absolute top-6 right-6">
+                        <i class="fa-solid fa-quote-right text-gold/20 text-4xl"></i>
+                    </div>
+                    <div class="flex gap-1 mb-4">
+                        <i class="fa-solid fa-star text-gold"></i>
+                        <i class="fa-solid fa-star text-gold"></i>
+                        <i class="fa-solid fa-star text-gold"></i>
+                        <i class="fa-solid fa-star text-gold"></i>
+                        <i class="fa-solid fa-star text-gold"></i>
+                    </div>
+                    <p class="text-white/80 text-lg mb-6 leading-relaxed italic">
+                        "Impressed with the quality of work performed. They showed up on time, were professional, and left my car looking better than new."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center">
+                            <span class="text-gold font-bold text-lg">CB</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Carl Bell</h4>
+                            <p class="text-white/50 text-sm">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="scroll-reveal relative py-24 lg:py-32">
+        <!-- Background -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1920&q=80" alt="Car interior" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/85 to-dark/70"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Content -->
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-full px-4 py-2 mb-6">
+                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        <span class="text-green-400 text-sm font-medium">Open 24 Hours • 7 Days a Week</span>
+                    </div>
+                    
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+                        Ready for a<br/><span class="text-gold">Showroom Shine?</span>
+                    </h2>
+                    
+                    <p class="text-xl text-white/70 mb-8">
+                        Book your appointment today and experience the Primeline difference.
+                    </p>
+                    
+                    <!-- Contact Info -->
+                    <div class="space-y-6 mb-10">
+                        <a href="tel:3146026622" class="flex items-center gap-4 group">
+                            <div class="w-14 h-14 bg-gold/20 rounded-xl flex items-center justify-center group-hover:bg-gold transition-colors">
+                                <i class="fa-solid fa-phone text-gold text-xl group-hover:text-dark transition-colors"></i>
+                            </div>
+                            <div>
+                                <p class="text-white/50 text-sm">Call Us Anytime</p>
+                                <p class="text-white text-xl font-bold">(314) 602-6622</p>
+                            </div>
+                        </a>
+                        
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-gold/20 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot text-gold text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-white/50 text-sm">Service Area</p>
+                                <p class="text-white text-xl font-bold">St. Louis, MO & Surrounding Areas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-charcoal rounded-2xl p-8 lg:p-10 border border-charcoal-light">
+                    <h3 class="text-2xl font-bold mb-6">Get Your Free Quote</h3>
+                    
+                    <form id="contact-form" class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-white/60 text-sm mb-2">Your Name</label>
+                                <input type="text" name="name" placeholder="John Doe" required class="w-full bg-dark border border-charcoal-light rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-gold focus:outline-none transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-white/60 text-sm mb-2">Phone Number</label>
+                                <input type="tel" name="phone" placeholder="(314) 555-1234" required class="w-full bg-dark border border-charcoal-light rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-gold focus:outline-none transition-colors">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-white/60 text-sm mb-2">Email Address</label>
+                            <input type="email" name="email" placeholder="john@example.com" required class="w-full bg-dark border border-charcoal-light rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-gold focus:outline-none transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-white/60 text-sm mb-2">Service Needed</label>
+                            <select name="service" required class="w-full bg-dark border border-charcoal-light rounded-lg px-4 py-3 text-white focus:border-gold focus:outline-none transition-colors">
+                                <option value="">Select a service</option>
+                                <option value="exterior">Exterior Wash</option>
+                                <option value="interior">Interior Detail</option>
+                                <option value="full">Full Detail</option>
+                                <option value="engine">Engine Clean</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-white/60 text-sm mb-2">Message (Optional)</label>
+                            <textarea name="message" rows="3" placeholder="Tell us about your vehicle..." class="w-full bg-dark border border-charcoal-light rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-gold focus:outline-none transition-colors resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gold text-dark py-4 rounded-lg font-bold text-lg hover:bg-gold-light transition-colors flex items-center justify-center gap-2">
+                            <span>Request Quote</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        
+                        <p class="text-center text-white/40 text-sm">
+                            Or call us directly at <a href="tel:3146026622" class="text-gold hover:underline">(314) 602-6622</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-charcoal-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <a href="#" class="inline-block mb-6">
+                        <span class="text-2xl font-black tracking-tight">PRIMELINE</span>
+                    </a>
+                    <p class="text-white/60 mb-6">
+                        St. Louis' premier mobile detailing service. Showroom-quality results, delivered to your location, 24/7.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-charcoal rounded-lg flex items-center justify-center text-white/60 hover:bg-gold hover:text-dark transition-all">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-charcoal rounded-lg flex items-center justify-center text-white/60 hover:bg-gold hover:text-dark transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-charcoal rounded-lg flex items-center justify-center text-white/60 hover:bg-gold hover:text-dark transition-all">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/60 hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-white/60 hover:text-gold transition-colors">About</a></li>
+                        <li><a href="#services" class="text-white/60 hover:text-gold transition-colors">Services</a></li>
+                        <li><a href="#reviews" class="text-white/60 hover:text-gold transition-colors">Reviews</a></li>
+                        <li><a href="#contact" class="text-white/60 hover:text-gold transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-white/60 hover:text-gold transition-colors">Exterior Wash</a></li>
+                        <li><a href="#services" class="text-white/60 hover:text-gold transition-colors">Interior Detail</a></li>
+                        <li><a href="#services" class="text-white/60 hover:text-gold transition-colors">Full Detail</a></li>
+                        <li><a href="#services" class="text-white/60 hover:text-gold transition-colors">Engine Clean</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="tel:3146026622" class="flex items-center gap-3 text-white/60 hover:text-gold transition-colors">
+                                <i class="fa-solid fa-phone text-gold"></i>
+                                <span>(314) 602-6622</span>
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3 text-white/60">
+                            <i class="fa-solid fa-clock text-gold"></i>
+                            <span>Open 24/7</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-white/60">
+                            <i class="fa-solid fa-location-dot text-gold"></i>
+                            <span>St. Louis, MO Area</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="mt-12 pt-8 border-t border-charcoal-light flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-white/40 text-sm">
+                    © 2026 Primeline Mobile Detailing. All rights reserved.
+                </p>
+                <div class="flex items-center gap-6 text-white/40 text-sm">
+                    <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-gold transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+        
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+            });
+        });
+        
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+        
+        // Form submission (demo)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! In a real implementation, this would send the form data to a server.');
+        });
+    </script>
+</body>
+</html>
